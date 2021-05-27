@@ -12,10 +12,3 @@ mochawesome-report-generator
     responsável por gerar o relatório html final
 # treinamento-softplan
 # treinamento-softplan
-# treinamento-softplan
-# treinamento-softplan
-# treinamento-softplan
-# Treinamento-Cypress
-# Treinamento-Cypress
-# Treinamento-Cypress
-
