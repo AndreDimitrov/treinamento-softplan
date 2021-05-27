@@ -46,3 +46,5 @@ describe('Artigos', () => {
   });
   
   // Filtro com tags >> npx cypress run --spec 'cypress/integration/Teste_com_Filtro.spec.js' --env grepTags=Segundo
+
+
