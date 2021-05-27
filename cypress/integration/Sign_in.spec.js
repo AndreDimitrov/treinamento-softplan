@@ -2,7 +2,7 @@
 
 describe('Autenticação', () => {
     
-    it('Efetuar login com usuários e senhas válidos', () => {
+    it('Efetuar login com usuários e senhas válidos', { tags: 'válidos' }, () => {
         // acessar o site
         cy.visit('/');
 

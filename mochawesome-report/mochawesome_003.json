@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-27T18:12:41.238Z",
+    "end": "2021-05-27T18:12:46.045Z",
+    "duration": 4807,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c3680f8b-3816-4b73-b97d-93ded8d3b6d8",
+      "title": "",
+      "fullFile": "cypress/integration/Sign_in.spec.js",
+      "file": "cypress/integration/Sign_in.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8a47b1a6-c4a6-4d1f-b993-021c21d0e8cf",
+          "title": "Autenticação",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Efetuar login com usuários e senhas válidos",
+              "fullTitle": "Autenticação Efetuar login com usuários e senhas válidos",
+              "timedOut": null,
+              "duration": 4513,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// acessar o site\ncy.visit('/'); //clicar no botão sign in\ncy.get('.nav-link').contains('Sign in').click(); //Outro método de efetuar o click    \n//cy.get('[href*=login]').click()\n//    .click()\n//instanciar usuário e senha >> Thanos7\nconst user = Cypress.env('user').email;\nconst pass = Cypress.env('user').password; //informar usuário e senha\ncy.get('input[type=email]').type(user);\ncy.get('input[type=password]').type(pass); //clicar no botão entrar\ncy.get('button.btn-primary').click(); //verificar se vc foi autenticado\ncy.get('.nav-pills a.nav-link').should('have.length', 2); // deve conter o tamanho = 2    \ncy.get('.nav-pills a.nav-link') // 2 elementos\n// posição - ep, first, last\n.first() // .eq(0)\n.should('contain.text', 'Your Feed'); // deve conter o texto Your Feed\n// should contain text Your Feed",
+              "err": {},
+              "uuid": "e2d39bca-c6ed-4bd8-ac92-46150924d843",
+              "parentUUID": "8a47b1a6-c4a6-4d1f-b993-021c21d0e8cf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e2d39bca-c6ed-4bd8-ac92-46150924d843"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4513,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

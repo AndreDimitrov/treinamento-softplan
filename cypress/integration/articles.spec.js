@@ -24,6 +24,6 @@ describe('Artigos', () => {
     cy.get('h1').should('contain.text', 'Teste 1')
     /* ==== End Cypress Studio ==== */
   });
-  
+    
 });
 
